@@ -1,0 +1,38 @@
+// mixins популярных брекпоинтов
+
+
+$headerColor: #6500ff;
+$headerSecondaryColor: #6f11ff;
+
+$bodyColor: #ffffff;
+$bodySecondaryColor: #f7f6fe;
+
+$alertColor: #ff5f60;
+$greyColor: #a9a5a5;
+$shadowColor: #183251;
+
+$desktopWidth: 1175px;
+$laptopWidth: 992px;
+$tabletsWidth: 768px;
+$phonesWidth: 480px;
+
+@mixin desktop {
+  @media screen and (max-width: $desktopWidth) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: $laptopWidth) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: $tabletsWidth) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: $phonesWidth) {
+    @content;
+  }
+}

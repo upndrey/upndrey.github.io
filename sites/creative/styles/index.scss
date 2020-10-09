@@ -1,0 +1,595 @@
+@import "mixins";
+
+// js
+.js_hidden {
+  transition: ease-in-out 0.5s;
+  margin-bottom: 0 !important;
+  & .js_menu {
+    height: 0;
+  }
+}
+// globals
+
+body {
+  overflow-x: hidden;
+  @include lato;
+}
+
+.container {
+  max-width: $desktopWidth;
+  box-sizing: border-box;
+  margin: auto;
+
+  @include desktop{
+    max-width: $laptopWidth;
+  }
+
+  @include laptop{
+    max-width: $tabletsWidth;
+  }
+
+  @include tablets{
+    max-width: $phonesWidth;
+  }
+
+  @include phones{
+    max-width: 100%;
+    padding: 10px;
+    margin: 5px;
+  }
+}
+
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  &__h {
+    text-align: center;
+    &:after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 1px;
+      background: $fontInverseColor;
+      margin: 30px auto 0 auto;
+    }
+  }
+}
+
+.readmore {
+  width: 180px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid $fontInverseColor;
+  
+  text-transform: uppercase;
+  font-size: 21px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+
+  &:hover {
+    background: $secondColor;
+    border: 1px solid transparent;
+  }
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 38px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.block {
+  width: 285px;
+}
+
+@keyframes arrowMove {
+  from {
+    opacity: .1;
+    margin-top: 35px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 50px;
+  }
+}
+
+// page
+
+.header {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  color: $fontInverseColor;
+  text-align: center;
+
+  @include image("../images/background/start-page.jpg", cover, center, center);
+
+  &__logo {
+    width: 123px;
+    height: 123px;
+    @include image("../images/logo.png");
+    margin-top: 150px;
+  }
+
+  &__title {
+    margin-top: 150px;
+    h1 {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__button {
+    margin-top: 150px;
+  }
+
+  &__arrow {
+    width: 17px;
+    height: 10px;
+    @include image("../images/arrow-down.png");
+    animation: arrowMove  1.5s infinite ease-in-out;
+  }
+}
+
+.nav {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__wrapper {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid $fontLightColor;
+    margin-bottom: 0;
+    transition: ease-in-out 0.5s;
+
+    @include tablets {
+      width: 100%;
+      background: $secondColor;
+      height: 35px;
+      border: none;
+      margin-bottom: 250px;
+    }
+
+  }
+
+  &__title {
+    @include sans;
+    font-weight: bold;
+    font-size: 28px;
+
+    @include tablets {
+      color: $fontInverseColor;
+      margin-left: 50px;
+      &:after {
+        content: '';
+        display: block;
+        width: 41px;
+        height: 23px;
+        position: absolute;
+        right: 50px;
+        top: 5px;
+        @include image("../images/icons/menu-media.png");
+        cursor: pointer;
+      }
+    }
+
+    @include phones {
+      width: 100%;
+      margin-left: 25px;
+      position: relative;
+      top: -15px;
+      &:after {
+        right: 25px;
+        top: 5px;
+      }
+    }
+  }
+
+  &>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: ease-in-out 0.5s;
+
+    &>li {
+      transition: ease-in-out 0.5s;
+      &>a {
+        text-transform: uppercase;
+        font-size: 18px;
+        margin: 0 20px;
+        transition: ease-in-out 0.5s;
+        &:hover {
+          font-weight: bold;
+          color: $secondColor;
+        }
+
+        @include tablets {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      @include tablets {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid $fontLightColor;
+      }
+    }
+
+    .activePage {
+      font-weight: bold;
+      color: $secondColor;
+    }
+
+    @include tablets {
+      overflow-y: hidden;
+      width: 100%;
+      height: 196px;
+
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 45px;
+
+      flex-direction: column;
+      justify-content: flex-start;
+      background: $fontInverseColor;
+    }
+  }
+}
+
+.nav.container {
+  @include tablets {
+    max-width: 100% !important;
+  }
+}
+
+.about {
+  margin-top: 100px;
+  &__title {
+    &>h2:after{
+      background: $fontColor;
+    }
+    &>p {
+      color: $fontLightColor;
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+
+  &__columns {
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    .img {
+      width: 58px;
+      height: 53px;
+      margin: auto;
+      border: 1px solid $fontLightColor;
+      border-radius: 150px;
+      padding: 10px;
+      background-position: center center;
+    }
+    .responsive {
+      @include image("../images/icons/responsive.png");
+      background-size: 58px 53px;
+    }
+    .minimalism {
+      @include image("../images/icons/minimalist.png");
+      background-size: 58px 53px;
+    }
+    .freebies {
+      @include image("../images/icons/free.png");
+      background-size: 58px 53px;
+    }
+
+    h3 {
+      margin-top: 50px;
+    }
+
+    p {
+      margin-top: 25px;
+      font-weight: lighter;
+      color: $fontLightColor;
+    }
+
+    &>div {
+      @include tablets {
+        margin: 50px 0;
+      }
+    }
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.portfolio {
+  margin: auto;
+  &__wrapper {
+    margin-top: 100px;
+    padding: 90px 0 90px 0;
+    background: $firstColor;
+  }
+
+  &__table {
+    width: 100%;
+    max-width: $laptopWidth;
+    max-height: 1100px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    .img {
+      width: 285px;
+      height: 193px;
+      margin-bottom: 40px;
+    }
+
+    @for $i from 1 through 11 {
+      .img#{$i} {
+        @include image("../images/portfolio/#{$i}.png")
+      }
+    }
+
+    .img4 {
+      height: 275px;
+    }
+
+    .img6 {
+      height: 346px;
+    }
+
+    .img11 {
+      height: 343px;
+    }
+
+    @include laptop {
+      max-width: $tabletsWidth;
+      max-height: 1800px;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    @include tablets {
+      max-width: $phonesWidth;
+      max-height: inherit;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    margin: 100px auto 0 auto;
+    border: 1px solid $fontColor;
+  }
+}
+
+.partners {
+  padding: 100px 0 100px 0;
+  @include image("../images/background/partners.jpg", cover, center, center);
+  &>h2 {
+    text-align: center;
+    font-weight: lighter;
+    text-transform: none;
+    color: $fontInverseColor;
+    font-size: 24px;
+  }
+
+  &__list {
+    margin: 50px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .img {
+      width: 122px;
+      height: 81px;
+    }
+
+    .alex2 {
+      @include image("../images/logos/alex2.png");
+    }
+
+    .archiq {
+      @include image("../images/logos/archiq.png");
+    }
+
+    .thomsoon {
+      @include image("../images/logos/thomsoon.png");
+    }
+  }
+}
+
+.contact {
+  margin-top: 100px;
+  &__title {
+    &>h2:after{
+      background: $fontColor;
+    }
+  }
+
+  &__content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    &>* {
+      margin: 0 10px;
+      @include tablets {
+        margin: 0;
+      }
+    }
+
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    width: 380px;
+    flex-wrap: wrap;
+    &>div {
+      width: 100%;
+      display: flex;
+      &:nth-child(1) {
+        justify-content: space-between;
+        flex-direction: row;
+        &>div {
+          display: flex;
+          flex-direction: column;
+          @include tablets {
+            margin: 10px 0;
+          }
+        }
+        @include tablets {
+          flex-direction: column;
+        }
+      }
+      &:nth-child(2) {
+        margin-top: 30px;
+        flex-direction: column;
+      }
+    }
+
+    & label {
+      @include lato;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    & input[type="text"],
+    & input[type="email"],
+    & textarea {
+      border: none;
+      background: $firstColor;
+      border-top: 1px solid $fontColor;
+      padding: 10px 5px;
+      box-sizing: border-box;
+    }
+
+    & input[type="submit"] {
+      @include lato;
+      text-transform: uppercase;
+      font-weight: bold;
+      border: none;
+      background: 0;
+      width: 100%;
+      text-align: right;
+      margin-top: 10px;
+      font-size: 21px;
+      cursor: pointer;
+    }
+
+    @include tablets {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  & .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &>p {
+      margin-bottom: 30px;
+      font-size: 18px;
+
+      .bold {
+        font-weight: bold;
+      }
+    }
+
+    &__icons {
+      width: 150px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .img {
+        width: 15px;
+        height: 15px;
+        background-position: center center;
+      }
+
+      .behance {
+        @include image("../images/contact/Behance.png");
+      }
+
+      .dribbble {
+        @include image("../images/contact/Dribbble.png");
+      }
+
+      .facebook {
+        @include image("../images/contact/Facebook.png");
+      }
+
+      .google {
+        @include image("../images/contact/Google.png");
+      }
+    }
+  }
+}
+
+.footer {
+  margin-top: 100px;
+  padding: 50px 0 100px 0;
+  background: $firstInverseColor;
+  @include sans;
+  color: $fontLightColor;
+
+  &__logo {
+    margin: auto;
+    width: 58px;
+    height: 58px;
+    @include image("../images/logo-footer.png");
+  }
+
+  &__links {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &>* {
+      margin: 10px 10px;
+    }
+  }
+
+  &__rights {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+  }
+}

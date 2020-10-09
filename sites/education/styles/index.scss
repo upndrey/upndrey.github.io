@@ -1,0 +1,663 @@
+@import "mixins";
+
+body {
+  overflow-x: hidden;
+}
+
+.btn-alert {
+  background: $alertColor;
+  color: #fff;
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding: 15px 30px;
+  border: 1px solid transparent;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+
+  transition: ease-in-out .5s;
+
+  &:hover {
+    cursor: pointer;
+    background: #fff;
+    color: $alertColor;
+    border: 1px solid $alertColor;
+  }
+
+  @include tablets{
+    width: 100%;
+  }
+
+  @include phones{
+  }
+}
+
+.container {
+  max-width: $desktopWidth;
+  margin: auto;
+  display: flex;
+  position: relative;
+
+  @include desktop{
+    max-width: $laptopWidth;
+  }
+
+  @include laptop{
+    max-width: $tabletsWidth;
+  }
+
+  @include tablets{
+    max-width: $phonesWidth;
+  }
+
+  @include phones{
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 72px;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+}
+
+p, a, .btn-alert {
+  font-size: 18px;
+}
+
+.block {
+  position: relative;
+  z-index: 999;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  &>h1 {
+    margin-bottom: 25px;
+  }
+
+  &>p {
+    max-width: 500px;
+    line-height: 25px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  &>* {
+    margin-bottom: 40px;
+  }
+
+
+  @include tablets{
+    text-align: center;
+    width: auto;
+  }
+}
+
+.firstScreenWrapper {
+  background: $headerColor;
+  padding: 50px 0 130px 0;
+  overflow: hidden;
+  height: 800px;
+  box-sizing: border-box;
+
+  @include phones{
+    padding: 30px 0 130px 0;
+  }
+}
+
+.header {
+  position: relative;
+  z-index: 999;
+  color: white;
+  max-width: $desktopWidth;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    position: relative;
+    bottom: 10px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+    &>a {
+      box-sizing: border-box;
+      height: 45px;
+      padding: 15px 30px;
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @include laptop{
+        padding: 15px 15px;
+      }
+    }
+    &__special {
+      margin-left: 80px;
+
+      @include laptop {
+        margin-left: 40px;
+        padding: 15px 30px !important;
+      }
+
+      @include tablets {
+        margin-left: 25px;
+      }
+
+      @include phones {
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+
+    @include phones {
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  @include desktop {
+    max-width: $laptopWidth;
+  }
+
+  @include laptop {
+    max-width: $tabletsWidth;
+  }
+
+  @include tablets {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.title {
+  position: relative;
+  color: white;
+  height: 500px;
+  margin-top: 150px;
+  z-index: 999;
+  display: flex;
+
+  &__stats {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+      &>img {
+        position: absolute;
+      }
+      .stats__cont>div {
+        &>p {
+          font-size: 16px;
+        }
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &>img {
+          margin-bottom: 10px;
+        }
+        &:nth-child(1){
+          position: absolute;
+          left: 296px;
+          top: 66px;
+          transform: rotate(-9deg);
+          &>img{
+            transform: rotate(9deg);
+          }
+          color: black;
+        }
+        &:nth-child(2){
+          position: absolute;
+          left: 270px;
+          top: 225px;
+        }
+        &:nth-child(3){
+          position: absolute;
+          left: 466px;
+          top: 206px;
+          transform: rotate(15deg);
+          &>img{
+            transform: rotate(-15deg);
+          }
+        }
+        &:nth-child(4){
+          position: absolute;
+          left: 151px;
+          top: 380px;
+        }
+        &:nth-child(5){
+          position: absolute;
+          left: 309px;
+          top: 380px;
+        }
+        &:nth-child(6){
+          position: absolute;
+          left: 465px;
+          top: 380px;
+        }
+      }
+    @include desktop{
+      position: relative;
+      right: 100px;
+    }
+    @include laptop{
+      position: relative;
+      right: 250px;
+    }
+    @include tablets{
+      display: none;
+    }
+  }
+
+  @include tablets{
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  @include phones{
+    margin-top: 30px;
+  }
+}
+
+.container__emailQuote {
+  z-index: 999;
+  position: relative;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+}
+
+.email {
+  max-width: 400px;
+  height: 300px;
+  box-sizing: border-box;
+
+
+  position: relative;
+  top:-100px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 50px 50px;
+
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: white;
+
+  background: $alertColor;
+  box-shadow: 0px -10px 0px 0px $shadowColor;
+  border-radius: 15px;
+
+  &__title {
+    font-weight: bolder;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:after {
+      content: '';
+      margin: 20px;
+      width: 75px;
+      height: 1px;
+      background: #fff;
+    }
+  }
+  &__text {
+    font-size: 21px;
+    margin-bottom: 20px;
+  }
+  &>form {
+    display: flex;
+    &>input[type="text"] {
+      background: #fff;
+      color: $greyColor;
+      border: 0;
+      flex-grow: 1;
+      border-radius: 25px 0 0 25px;
+      padding: 15px;
+    }
+    &>span {
+      display: flex;
+      position: relative;
+      background: #000;
+      border: 0;
+      border-radius: 0 25px 25px 0;
+      width: 75px;
+      height: 45px;
+      align-items: center;
+      justify-content: center;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        width: 25px;
+        height: 25px;
+        background: url("../images/tg.png") no-repeat;
+        background-size: 25px 25px;
+      }
+      &>input[type="submit"] {
+        position: absolute;
+        border-radius: 0 25px 25px 0;
+        width: 75px;
+        height: 45px;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+      }
+    }
+  }
+
+  @include tablets{
+    top: -30px;
+  }
+
+  @include phones{
+    width: 100%;
+  }
+}
+
+.quote {
+  margin-top: 50px;
+  max-width: 500px;
+  &__text {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+  }
+
+  &__author {
+    font-family: 'Poppins', sans-serif;
+    color: $alertColor;
+  }
+
+  @include tablets{
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+}
+
+.container__block {
+  position: relative;
+  z-index: 999;
+  margin-bottom: 200px;
+  @include tablets{
+    margin-bottom: 50px;
+  }
+}
+
+.twoGuys {
+  display: flex;
+  &__img {
+    position: relative;
+    display: block;
+    z-index: 999;
+    width: 50%;
+    margin-right: 50px;
+    background: url("../images/two_people.png") no-repeat;
+    background-size: contain;
+    @include tablets{
+      margin: auto;
+      min-width: 250px;
+      min-height: 250px;
+    }
+  }
+  @include tablets{
+    flex-direction: column;
+  }
+}
+
+.guyWithBook {
+  &__img {
+    position: relative;
+    z-index: 999;
+    width: 50%;
+    margin-left: 50px;
+    background: url("../images/guy_with_book.png") no-repeat;
+    background-size: contain;
+    @include tablets{
+      margin: auto;
+      min-width: 250px;
+      min-height: 250px;
+    }
+  }
+  @include tablets{
+    flex-direction: column-reverse;
+  }
+}
+
+.columns {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  &__img {
+    width: 150px;
+    height: 150px;
+    border-radius: 90px;
+    margin-bottom: 40px;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    &>h3 {
+      margin-bottom: 25px;
+    }
+
+    &>p {
+      font-family: 'Poppins', sans-serif;
+      color: $greyColor;
+    }
+
+    &:nth-child(1) {
+      .columns__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: #4bd2ff;
+        box-shadow: 0px -2px 30px 0px #4bd2ff;
+        &>span {
+          width: 75px;
+          height: 75px;
+          background: url("../images/guy_on_planet.png");
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    &:nth-child(2) {
+      .columns__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: #694bff;
+        box-shadow: 0px -2px 30px 0px #694bff;
+        &>span {
+          width: 75px;
+          height: 75px;
+          background: url("../images/idea.png");
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    &:nth-child(3) {
+      .columns__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: #ffb14b;
+        box-shadow: 0px -2px 30px 0px #ffb14b;
+        &>span {
+          width: 60px;
+          height: 50px;
+          background: url("../images/educated.png");
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    @include tablets{
+      margin-bottom: 75px;
+    }
+  }
+  @include tablets{
+    flex-direction: column;
+  }
+}
+
+.footer {
+  font-family: 'Poppins', sans-serif;
+  padding: 50px 0;
+  color: $greyColor;
+  border-top: 1px solid $greyColor;
+  display: flex;
+  justify-content: space-between;
+  &>* {
+    display: flex;
+    justify-content: space-between;
+    &>* {
+      padding: 0 10px;
+      @include tablets{
+        margin-bottom: 10px;
+      }
+    }
+    @include laptop{
+      margin-bottom: 30px;
+    }
+    @include tablets{
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+  }
+  @include laptop{
+    padding: 30px 0;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @include tablets{
+    padding: 10px 0;
+  }
+}
+
+.wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.bg{
+  max-width: 100%;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+  &__polygon1 {
+    width: 150px;
+    background: url("../images/Polygon 1.png") no-repeat;
+    top: 500px;
+    right: 0;
+  }
+  &__polygon2 {
+    background: url("../images/Polygon 2.png") no-repeat;
+    top: 400px;
+    left: 50%;
+  }
+  &__rect1 {
+    width: 320px;
+    background: url("../images/Rounded Rectangle 1.png") no-repeat;
+    top: 0;
+    right: 100px;
+  }
+  &__rect2 {
+    background: url("../images/Rounded Rectangle 1 copy.png") no-repeat;
+    top: 0;
+    left: 35%;
+  }
+  &__rect3 {
+    background: url("../images/Rounded Rectangle 1 copy 2.png") no-repeat;
+    top: 200px;
+    left: 200px;
+  }
+  &__shape1 {
+    width: 1000px;
+    height: 1000px;
+    background: url("../images/Shape 1.png") no-repeat;
+    top: -300px;
+    left: 0;
+  }
+  &__shape2 {
+    width: 845px;
+    height: 1000px;
+    background: url("../images/Shape 2.png") no-repeat;
+    top: -500px;
+    right: 0;
+  }
+}
+
+
+.js_quote_block {
+  display: none;
+}
+
+.js_quote_block_active {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.js_quote-nav {
+  margin: 10px auto;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.js_quote_nav_dot {
+  position: relative;
+  z-index: 9999;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+  border-radius: 90px;
+  cursor: pointer;
+}
+
+.js_dot_active {
+  border: 0;
+  background: $alertColor;
+}

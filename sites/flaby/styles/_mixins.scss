@@ -1,0 +1,31 @@
+$headerFirstly: #42a8f6;
+$headerSecondary: #469ada;
+$blue: #66d4f4;
+$grey: #494949;
+
+//sizes
+$desktopWidth: 1110px;
+$laptopWidth: 992px;
+$tabletsWidth: 768px;
+$phonesWidth: 480px;
+
+@mixin desktop {
+  @media screen and (max-width: $desktopWidth) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: $laptopWidth) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: $tabletsWidth) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: $phonesWidth) {
+    @content;
+  }
+}

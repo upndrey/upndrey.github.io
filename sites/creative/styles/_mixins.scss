@@ -1,0 +1,53 @@
+// colors
+$firstColor: #f3f3f3;
+$secondColor: #ada074;
+$firstInverseColor: #3c3c3c;
+
+$fontColor: #000;
+$fontInverseColor: #fff;
+$fontLightColor: #a4a4a4;
+
+// sizes
+$desktopWidth: 1170px;
+$laptopWidth: 992px;
+$tabletsWidth: 768px;
+$phonesWidth: 480px;
+
+// fonts
+@mixin lato {
+  font-family: 'Lato', sans-serif;
+}
+
+@mixin sans {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+// images
+@mixin image($link, $size: contain, $horizPos: inherit, $verticPos: inherit) {
+  background-image: url($link);
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: $horizPos $verticPos;
+}
+
+// adaptive
+@mixin desktop {
+  @media screen and (max-width: $desktopWidth) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: $laptopWidth) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: $tabletsWidth) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: $phonesWidth) {
+    @content;
+  }
+}
