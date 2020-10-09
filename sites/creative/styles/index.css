@@ -123,6 +123,7 @@ p {
   .nav__wrapper {
     width: 100%;
     padding: 10px 0;
+    background: #fff;
     border-bottom: 1px solid #a4a4a4;
     margin-bottom: 0;
     transition: ease-in-out 0.5s; }
