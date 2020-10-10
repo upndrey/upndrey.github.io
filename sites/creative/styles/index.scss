@@ -150,6 +150,10 @@ p {
     @include image("../images/arrow-down.png");
     animation: arrowMove  1.5s infinite ease-in-out;
   }
+
+  @include phones {
+    height: 900px;
+  }
 }
 
 .nav {

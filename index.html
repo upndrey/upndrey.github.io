@@ -2,38 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="viewport" content="width=450,initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="HandheldFriendly" content="true"/>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/index.css">
     <title>Портфолио</title>
 </head>
 <body>
-<header>
-    <h1>Андрей Бобров</h1>
-    <p>Веб-разработчк</p>
+<header class="container">
+    <div class="title">
+        <h1>Андрей Бобров</h1>
+        <p>Веб-разработчик</p>
+    </div>
+    <ul class="links">
+        <li><a href="https://vk.com/upndrey">vk</a></li>
+        <li><a href="https://t.me/upndrey">tg</a></li>
+        <li><a href="tel:+79967030447">+7&nbsp;996&nbsp;703&#8209;04&#8209;47</a></li>
+    </ul>
 </header>
 <div class="container portfolio">
     <h2>Примеры работ</h2>
     <ul>
         <li>
-            <iframe src="./sites/creative/index.html" frameborder="0" class="container"></iframe>
+            <div class="portfolio__title">
+                <h3>Monitoringfk.ru</h3>
+                <ul>
+                    <li>Дизайн</li>
+                    <li>Верстка</li>
+                    <li>Back-end</li>
+                    <li>Обслуживание</li>
+                </ul>
+            </div>
+            <iframe src="https://monitoringfk.ru/" frameborder="0"></iframe>
+            <div class="controls">
+                <a href="https://monitoringfk.ru/" class="link">Ссылка на Monitoringfk</a>
+                <a href="./sites/creative/index.html" class="link">Подробнее</a>
+            </div>
+        </li>
+        <li>
+            <div class="portfolio__title">
+                <h3>Creative Template</h3>
+                <ul>
+                    <li>Верстка</li>
+                </ul>
+            </div>
+            <iframe src="./sites/creative/index.html" frameborder="0"></iframe>
             <div class="controls">
                 <a href="./sites/creative/index.html" class="link">Ссылка на Creative Template</a>
             </div>
         </li>
         <li>
+            <div class="portfolio__title">
+                <h3>Education Template</h3>
+                <ul>
+                    <li>Верстка</li>
+                </ul>
+            </div>
             <iframe src="./sites/education/index.html" frameborder="0" class="container"></iframe>
             <div class="controls">
                 <a href="./sites/education/index.html" class="link">Ссылка на Education Template</a>
             </div>
         </li>
         <li>
-            <iframe src="./sites/flaby/index.html" frameborder="0" class="container"></iframe>
+            <div class="portfolio__title">
+                <h3>Flaby Template</h3>
+                <ul>
+                    <li>Верстка</li>
+                </ul>
+            </div>
+            <iframe src="./sites/flaby/index.html" frameborder="0"></iframe>
             <div class="controls">
                 <a href="./sites/flaby/index.html" class="link">Ссылка на Flaby Template</a>
             </div>

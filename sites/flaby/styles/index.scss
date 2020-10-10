@@ -1,6 +1,11 @@
 @import "mixins";
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
 body {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -53,6 +58,7 @@ p, li {
 }
 
 .header__wrapper {
+  width: 100%;
   height: 935px;
 
   overflow: hidden;
@@ -92,7 +98,7 @@ p, li {
 
       @include laptop{
         padding: 0;
-        margin-right: 5px;
+        margin-right: 4px;
       }
 
       @include tablets {
@@ -192,6 +198,10 @@ p, li {
         justify-content: space-between;
       }
 
+      @include phones {
+        flex-direction: column;
+      }
+
       &>* {
         width: 240px;
         height: 80px;
@@ -237,6 +247,11 @@ p, li {
         @include tablets {
           margin-right: 0;
         }
+
+        @include phones {
+          width: 100%;
+          margin-bottom: 10px;
+        }
       }
 
       #learnMore {
@@ -249,6 +264,10 @@ p, li {
           background: #fff;
           color: $blue;
           border: 1px solid $blue;
+        }
+
+        @include phones {
+          width: 100%;
         }
       }
 
@@ -405,6 +424,7 @@ p, li {
   align-items: flex-end;
 
   &__wrapper {
+    width: 100%;
     position: relative;
     padding-top: 150px;
     height: 792px;
@@ -710,6 +730,7 @@ p, li {
   }
 
   &__wrapper {
+    width: 100%;
     height: 761px;
 
     box-sizing: border-box;
@@ -839,6 +860,7 @@ p, li {
   }
 
   &__wrapper {
+    width: 100%;
     padding: 66px 0;
     height: 870px;
 

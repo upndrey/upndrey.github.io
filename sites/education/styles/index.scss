@@ -1,6 +1,10 @@
 @import "mixins";
-
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
 body {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -28,8 +32,6 @@ body {
     width: 100%;
   }
 
-  @include phones{
-  }
 }
 
 .container {
@@ -60,12 +62,18 @@ h1 {
   font-family: 'Raleway', sans-serif;
   font-size: 72px;
   font-weight: bold;
+  @include tablets{
+    font-size: 48px;
+  }
 }
 
 h2 {
   font-family: 'Raleway', sans-serif;
   font-size: 36px;
   font-weight: bold;
+  @include tablets{
+    font-size: 32px;
+  }
 }
 
 h3 {
@@ -100,20 +108,26 @@ p, a, .btn-alert {
 
 
   @include tablets{
-    text-align: center;
     width: auto;
   }
 }
 
 .firstScreenWrapper {
+  position: relative;
   background: $headerColor;
   padding: 50px 0 130px 0;
   overflow: hidden;
   height: 800px;
   box-sizing: border-box;
 
+  @include tablets{
+    padding: 30px 0 50px 0;
+    height: 650px;
+  }
+
   @include phones{
-    padding: 30px 0 130px 0;
+    padding: 30px 0 50px 0;
+    height: 700px;
   }
 }
 

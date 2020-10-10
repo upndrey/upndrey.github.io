@@ -1,4 +1,9 @@
+html {
+  width: 100%;
+  overflow-x: hidden; }
+
 body {
+  width: 100%;
   overflow-x: hidden; }
 
 .container {
@@ -40,6 +45,7 @@ p, li {
   font-family: 'Raleway', serif; }
 
 .header__wrapper {
+  width: 100%;
   height: 935px;
   overflow: hidden;
   background: #42a8f6; }
@@ -69,7 +75,7 @@ p, li {
       @media screen and (max-width: 992px) {
         .menu__links > * {
           padding: 0;
-          margin-right: 5px; } }
+          margin-right: 4px; } }
       @media screen and (max-width: 768px) {
         .menu__links > * {
           border-bottom: 1px solid #ffffff; } }
@@ -139,6 +145,9 @@ p, li {
       @media screen and (max-width: 768px) {
         .header .title__buttons {
           justify-content: space-between; } }
+      @media screen and (max-width: 480px) {
+        .header .title__buttons {
+          flex-direction: column; } }
       .header .title__buttons > * {
         width: 240px;
         height: 80px;
@@ -173,6 +182,10 @@ p, li {
         @media screen and (max-width: 768px) {
           .header .title__buttons #googleStore {
             margin-right: 0; } }
+        @media screen and (max-width: 480px) {
+          .header .title__buttons #googleStore {
+            width: 100%;
+            margin-bottom: 10px; } }
       .header .title__buttons #learnMore {
         background: #469ada;
         border: 1px solid transparent;
@@ -182,6 +195,9 @@ p, li {
           background: #fff;
           color: #66d4f4;
           border: 1px solid #66d4f4; }
+        @media screen and (max-width: 480px) {
+          .header .title__buttons #learnMore {
+            width: 100%; } }
       @media screen and (max-width: 768px) {
         .header .title__buttons {
           width: 100%; } }
@@ -292,6 +308,7 @@ p, li {
   flex-direction: column;
   align-items: flex-end; }
   .features__wrapper {
+    width: 100%;
     position: relative;
     padding-top: 150px;
     height: 792px;
@@ -510,6 +527,7 @@ p, li {
   .customer > h2 {
     margin-bottom: 35px; }
   .customer__wrapper {
+    width: 100%;
     height: 761px;
     box-sizing: border-box;
     background: url("../images/customer_bg.png");
@@ -591,6 +609,7 @@ p, li {
 .pricing > h2:after {
   margin: 15px 0 107px 0; }
 .pricing__wrapper {
+  width: 100%;
   padding: 66px 0;
   height: 870px;
   background: #f4fbfc;
