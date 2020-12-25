@@ -847,16 +847,25 @@ body {
     .hiddenCeh {
       top: -120px;
       right: 80px;
+      @include tablets {
+        top: 700px;
+      }
     }
 
     .hiddenRezka {
       top: -120px;
       right: 80px;
+      @include tablets {
+        top: 100px;
+      }
     }
 
     .hiddenZink {
       top: -120px;
       right: 80px;
+      @include tablets {
+        top: 700px;
+      }
     }
     &__block {
       display: flex;
@@ -877,6 +886,14 @@ body {
       -ms-transform: scale(.5);
       -o-transform: scale(.5);
       transform: scale(.5);
+      @include laptop {
+        width: auto;
+      }
+      @include tablets {
+        width: auto;
+        height: 1200px;
+      }
+
       &.blockAnimate {
         visibility: visible;
         -webkit-transform: scale(1, 1);
@@ -946,7 +963,7 @@ body {
           line-height: 32px;
           position: absolute;
           bottom: 4px;
-          right: -88px;
+          right: -50px;
           z-index: 3;
         }
       }
@@ -1213,6 +1230,25 @@ body {
           right: -45px;
           z-index: 3;
         }
+      }
+    }.hiddenCeh {
+       @include tablets {
+         border: 1px solid #fff;
+         top: 900px;
+       }
+     }
+
+    .hiddenRezka {
+      @include tablets {
+        border: 1px solid #fff;
+        top: 100px;
+      }
+    }
+
+    .hiddenZink {
+      @include tablets {
+        border: 1px solid #fff;
+        top: 700px;
       }
     }
   }

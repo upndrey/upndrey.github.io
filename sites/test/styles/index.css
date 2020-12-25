@@ -937,12 +937,21 @@ body {
     .services .hiddenBlocks .hiddenCeh {
       top: -120px;
       right: 80px; }
+      @media screen and (max-width: 768px) {
+        .services .hiddenBlocks .hiddenCeh {
+          top: 700px; } }
     .services .hiddenBlocks .hiddenRezka {
       top: -120px;
       right: 80px; }
+      @media screen and (max-width: 768px) {
+        .services .hiddenBlocks .hiddenRezka {
+          top: 100px; } }
     .services .hiddenBlocks .hiddenZink {
       top: -120px;
       right: 80px; }
+      @media screen and (max-width: 768px) {
+        .services .hiddenBlocks .hiddenZink {
+          top: 700px; } }
     .services .hiddenBlocks__block {
       display: flex;
       position: absolute;
@@ -962,6 +971,13 @@ body {
       -ms-transform: scale(0.5);
       -o-transform: scale(0.5);
       transform: scale(0.5); }
+      @media screen and (max-width: 1024px) {
+        .services .hiddenBlocks__block {
+          width: auto; } }
+      @media screen and (max-width: 768px) {
+        .services .hiddenBlocks__block {
+          width: auto;
+          height: 1200px; } }
       .services .hiddenBlocks__block.blockAnimate {
         visibility: visible;
         -webkit-transform: scale(1, 1);
@@ -1035,7 +1051,7 @@ body {
           line-height: 32px;
           position: absolute;
           bottom: 4px;
-          right: -88px;
+          right: -50px;
           z-index: 3; }
       .services .hiddenBlocks__block .polimernaya {
         position: relative;
@@ -1334,6 +1350,18 @@ body {
           bottom: 13px;
           right: -45px;
           z-index: 3; }
+    @media screen and (max-width: 768px) {
+      .services .hiddenBlocks .hiddenCeh {
+        border: 1px solid #fff;
+        top: 900px; } }
+    @media screen and (max-width: 768px) {
+      .services .hiddenBlocks .hiddenRezka {
+        border: 1px solid #fff;
+        top: 100px; } }
+    @media screen and (max-width: 768px) {
+      .services .hiddenBlocks .hiddenZink {
+        border: 1px solid #fff;
+        top: 700px; } }
   .services .slick-slide {
     -webkit-transform: scale(0.6);
     -moz-transform: scale(0.6);
