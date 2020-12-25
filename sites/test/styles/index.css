@@ -2132,6 +2132,9 @@ body {
     -webkit-appearance: none; }
     .map__location > option {
       color: #000; }
+  @media screen and (max-width: 768px) {
+    .map {
+      height: 550px; } }
 
 #map1, #map2 {
   width: 100%;

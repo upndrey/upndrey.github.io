@@ -2101,6 +2101,9 @@ body {
       color: #000;
     }
   }
+  @include tablets {
+    height: 550px;
+  }
 }
 
 #map1, #map2 {
