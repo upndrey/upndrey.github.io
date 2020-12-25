@@ -12,6 +12,7 @@ function init(){
     myMap2.geoObjects.add(myPlacemark2);
 }
 
+if ($(window).width() > 900) {
 var myFullpage = new fullpage('#fullpage', {
     anchors: ['firstScreen', 'catalog', 'services','callback'],
     menu: '#menu',
@@ -22,6 +23,7 @@ var myFullpage = new fullpage('#fullpage', {
         disablePointer: true
     }
 });
+}
 
 $("#send-message").click(function(e) {
     e.preventDefault();
