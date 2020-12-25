@@ -172,8 +172,9 @@ body {
 
   &:before {
     z-index: -1;
-    @include icon("../images/firstScreen/svarka.jpg", 100%, 100%, true, absolute);
+    @include icon("../images/firstScreen/svarka.jpg", 100%, 160%, true, absolute);
     top: 0;
+    background-position: center;
   }
 
   @include tablets {
