@@ -1566,6 +1566,7 @@ $(".ceh").click(function(e) {
     $(".hiddenBlocks__bg").removeClass("displaynone");
 });
 
+
 $(".rezka").click(function(e) {
     $(".hiddenRezka").addClass("blockAnimate");
     $(".hiddenBlocks__bg").removeClass("displaynone");
@@ -1577,6 +1578,15 @@ $(".zink").click(function(e) {
 });
 
 $(".hiddenBlocks__bg").click(function(e) {
+    $(".hiddenCeh").removeClass("blockAnimate");
+
+    $(".hiddenRezka").removeClass("blockAnimate");
+
+    $(".hiddenZink").removeClass("blockAnimate");
+    $(".hiddenBlocks__bg").addClass("displaynone");
+});
+
+$("#closeService").click(function(e) {
     $(".hiddenCeh").removeClass("blockAnimate");
 
     $(".hiddenRezka").removeClass("blockAnimate");
