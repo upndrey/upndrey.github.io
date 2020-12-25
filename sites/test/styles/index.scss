@@ -847,25 +847,16 @@ body {
     .hiddenCeh {
       top: -120px;
       right: 80px;
-      @include tablets {
-        top: 700px;
-      }
     }
 
     .hiddenRezka {
       top: -120px;
       right: 80px;
-      @include tablets {
-        top: 100px;
-      }
     }
 
     .hiddenZink {
       top: -120px;
       right: 80px;
-      @include tablets {
-        top: 700px;
-      }
     }
     &__block {
       display: flex;
@@ -1241,7 +1232,7 @@ body {
     }.hiddenCeh {
        @include tablets {
          border: 1px solid #fff;
-         top: 900px;
+         top: 1400px;
        }
      }
 
