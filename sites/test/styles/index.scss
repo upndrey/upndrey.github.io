@@ -1227,6 +1227,9 @@ body {
           top: 0;
           left: -40px;
           z-index: 3;
+          @include phones {
+            left: 0;
+          }
         }
       }
 
@@ -1238,6 +1241,9 @@ body {
         &:before {
           @include icon("../images/services/holodnoe.jpg", 361px, 296px, true, absolute);
           opacity: .65;
+          @include phones {
+            width: 345px;
+          }
         }
         &__title {
           width: 316px;
@@ -1251,6 +1257,9 @@ body {
           bottom: 13px;
           right: -45px;
           z-index: 3;
+          @include phones {
+            left: 0;
+          }
         }
       }
     }.hiddenCeh {

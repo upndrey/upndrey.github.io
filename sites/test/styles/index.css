@@ -1344,6 +1344,9 @@ body {
           top: 0;
           left: -40px;
           z-index: 3; }
+          @media screen and (max-width: 480px) {
+            .services .hiddenBlocks__block .termodiffus__title {
+              left: 0; } }
       .services .hiddenBlocks__block .holodnoe {
         position: relative;
         display: block;
@@ -1359,6 +1362,9 @@ body {
           width: 361px;
           height: 296px;
           opacity: .65; }
+          @media screen and (max-width: 480px) {
+            .services .hiddenBlocks__block .holodnoe:before {
+              width: 345px; } }
         .services .hiddenBlocks__block .holodnoe__title {
           width: 316px;
           color: #fff;
@@ -1371,6 +1377,9 @@ body {
           bottom: 13px;
           right: -45px;
           z-index: 3; }
+          @media screen and (max-width: 480px) {
+            .services .hiddenBlocks__block .holodnoe__title {
+              left: 0; } }
     @media screen and (max-width: 768px) {
       .services .hiddenBlocks .hiddenCeh {
         border: 1px solid #fff;
