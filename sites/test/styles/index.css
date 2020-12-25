@@ -1012,6 +1012,13 @@ body {
           width: 376px;
           height: 277px;
           opacity: .65; }
+          @media screen and (max-width: 480px) {
+            .services .hiddenBlocks__block .plenka:before {
+              -webkit-transform: scale(0.7);
+              -moz-transform: scale(0.7);
+              -ms-transform: scale(0.7);
+              -o-transform: scale(0.7);
+              transform: scale(0.7); } }
         .services .hiddenBlocks__block .plenka__title {
           width: 325px;
           color: #fff;
@@ -1051,6 +1058,9 @@ body {
           bottom: 4px;
           right: -50px;
           z-index: 3; }
+          @media screen and (max-width: 480px) {
+            .services .hiddenBlocks__block .prodolno__title {
+              width: 338px; } }
       .services .hiddenBlocks__block .polimernaya {
         position: relative;
         display: block;
@@ -1105,6 +1115,9 @@ body {
           bottom: 0;
           left: -24px;
           z-index: 3; }
+          @media screen and (max-width: 480px) {
+            .services .hiddenBlocks__block .peremotka__title {
+              left: -10px; } }
       .services .hiddenBlocks__block .gidroabraz {
         position: relative;
         display: block;
@@ -1159,6 +1172,9 @@ body {
           top: 9px;
           right: -82px;
           z-index: 3; }
+          @media screen and (max-width: 480px) {
+            .services .hiddenBlocks__block .lentopilniy__title {
+              width: 300px; } }
       .services .hiddenBlocks__block .gazokislorod {
         position: relative;
         display: block;
@@ -1174,6 +1190,13 @@ body {
           width: 410px;
           height: 252px;
           opacity: .65; }
+          @media screen and (max-width: 480px) {
+            .services .hiddenBlocks__block .gazokislorod:before {
+              -webkit-transform: scale(0.7);
+              -moz-transform: scale(0.7);
+              -ms-transform: scale(0.7);
+              -o-transform: scale(0.7);
+              transform: scale(0.7); } }
         .services .hiddenBlocks__block .gazokislorod__title {
           width: 196px;
           color: #fff;

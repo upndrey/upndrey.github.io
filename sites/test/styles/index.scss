@@ -925,6 +925,13 @@ body {
         &:before {
           @include icon("../images/services/plenka.png", 376px, 277px, true, absolute);
           opacity: .65;
+          @include phones {
+            -webkit-transform: scale(.7);
+            -moz-transform: scale(.7);
+            -ms-transform: scale(.7);
+            -o-transform: scale(.7);
+            transform: scale(.7);
+          }
         }
 
         &__title {
@@ -963,6 +970,9 @@ body {
           bottom: 4px;
           right: -50px;
           z-index: 3;
+          @include phones {
+            width: 338px;
+          }
         }
       }
 
@@ -1011,6 +1021,9 @@ body {
           bottom: 0;
           left: -24px;
           z-index: 3;
+          @include phones {
+            left: -10px;
+          }
         }
       }
 
@@ -1059,7 +1072,11 @@ body {
           top: 9px;
           right: -82px;
           z-index: 3;
+          @include phones {
+            width: 300px;
+          }
         }
+
       }
 
       .gazokislorod {
@@ -1070,6 +1087,13 @@ body {
         &:before {
           @include icon("../images/services/gazokislorod.jpg", 410px, 252px, true, absolute);
           opacity: .65;
+          @include phones {
+            -webkit-transform: scale(.7);
+            -moz-transform: scale(.7);
+            -ms-transform: scale(.7);
+            -o-transform: scale(.7);
+            transform: scale(.7);
+          }
         }
         &__title {
           width: 196px;
