@@ -905,6 +905,13 @@ body {
         bottom: 0;
         left: 0;
         right: 0;
+        @include phones {
+          -webkit-transform: scale(.8);
+          -moz-transform: scale(.8);
+          -ms-transform: scale(.8);
+          -o-transform: scale(.8);
+          transform: scale(.8);
+        }
       }
 
       .elem {
