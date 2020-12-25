@@ -1103,6 +1103,9 @@ body {
           width: 368px;
           height: 245px;
           opacity: .65; }
+          @media screen and (max-width: 480px) {
+            .services .hiddenBlocks__block .peremotka:before {
+              width: 345px; } }
         .services .hiddenBlocks__block .peremotka__title {
           width: 322px;
           color: #fff;

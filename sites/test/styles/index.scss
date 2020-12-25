@@ -1008,6 +1008,9 @@ body {
         &:before {
           @include icon("../images/services/peremotka.png", 368px, 245px, true, absolute);
           opacity: .65;
+          @include phones {
+            width: 345px;
+          }
         }
         &__title {
           width: 322px;
