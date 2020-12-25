@@ -172,9 +172,13 @@ body {
 
   &:before {
     z-index: -1;
-    @include icon("../images/firstScreen/svarka.jpg", 100%, 160%, true, absolute);
+    @include icon("../images/firstScreen/svarka.jpg", 100%, 100%, true, absolute);
     top: 0;
     background-position: center;
+
+    @include tablets {
+      height: 200%;
+    }
   }
 
   @include tablets {
@@ -589,6 +593,10 @@ body {
   @include laptop {
     right: 15px;
     bottom: 15px;
+  }
+
+  @include tablets {
+    display: none;
   }
 }
 /* /FIRST SCREEN */
