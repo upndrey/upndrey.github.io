@@ -2139,6 +2139,9 @@ body {
 #map1, #map2 {
   width: 100%;
   height: 850px; }
+  @media screen and (max-width: 768px) {
+    #map1, #map2 {
+      height: 550px; } }
 
 .ymaps-layers-pane {
   filter: invert(100%);
