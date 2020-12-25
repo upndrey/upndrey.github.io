@@ -1586,7 +1586,7 @@ $(".hiddenBlocks__bg").click(function(e) {
     $(".hiddenBlocks__bg").addClass("displaynone");
 });
 
-$("#closeService").click(function(e) {
+$(".closeService").click(function(e) {
     $(".hiddenCeh").removeClass("blockAnimate");
 
     $(".hiddenRezka").removeClass("blockAnimate");
