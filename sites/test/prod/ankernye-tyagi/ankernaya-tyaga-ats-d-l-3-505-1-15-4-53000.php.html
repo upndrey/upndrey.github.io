@@ -324,6 +324,11 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
+      $slickNav = $('#slickNav');
+      $navCount = $slickNav.find("img").length;
+      if($navCount > 3) {
+          $navCount = 3;
+      }
       $('#slick').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -331,8 +336,8 @@
           fade: true,
           asNavFor: '#slickNav'
       });
-      $('#slickNav').slick({
-          slidesToShow: 3,
+      $slickNav.slick({
+          slidesToShow: $navCount,
           slidesToScroll: 1,
           asNavFor: '#slick',
           centerMode: true,
