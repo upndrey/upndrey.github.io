@@ -305,12 +305,17 @@
   $(document).ready(function(){
       var $slickNav = $('#slickNav');
       var $navCount = $slickNav.find("img").length;
-      var $asNavFor = '#slickNav';
       if($navCount > 3) {
           $navCount = 3;
       }
+      $('#slick').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: '#slickNav'
+      });
       if($navCount === 1) {
-          $asNavFor = null;
           $slickNav.css({'display': 'none',});
       }
       else {
@@ -323,13 +328,6 @@
               arrows: true
           });
       }
-      $('#slick').slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          fade: true,
-          asNavFor: $asNavFor
-      });
   });
 </script>
 <script>
