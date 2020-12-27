@@ -305,23 +305,30 @@
   $(document).ready(function(){
       var $slickNav = $('#slickNav');
       var $navCount = $slickNav.find("img").length;
+      var $asNavFor = '#slickNav';
       if($navCount > 3) {
           $navCount = 3;
+      }
+      if($navCount === 1) {
+          $asNavFor = null;
+          $slickNav.css({'display': 'none',});
+      }
+      else {
+          $slickNav.slick({
+              slidesToShow: $navCount,
+              slidesToScroll: 1,
+              asNavFor: '#slick',
+              centerMode: true,
+              focusOnSelect: true,
+              arrows: true
+          });
       }
       $('#slick').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
           fade: true,
-          asNavFor: '#slickNav'
-      });
-      $slickNav.slick({
-          slidesToShow: $navCount,
-          slidesToScroll: 1,
-          asNavFor: '#slick',
-          centerMode: true,
-          focusOnSelect: true,
-          arrows: true
+          asNavFor: $asNavFor
       });
   });
 </script>
