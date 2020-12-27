@@ -509,6 +509,11 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
+      var $slickNav = $('#slickNav');
+      var $navCount = $slickNav.find("img").length;
+      if($navCount > 3) {
+          $navCount = 3;
+      }
       $('#slick').slick({
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -516,14 +521,19 @@
           fade: true,
           asNavFor: '#slickNav'
       });
-      $('#slickNav').slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          asNavFor: '#slick',
-          centerMode: true,
-          focusOnSelect: true,
-          arrows: true
-      });
+      if($navCount === 1) {
+          $slickNav.css({'display': 'none',});
+      }
+      else {
+          $slickNav.slick({
+              slidesToShow: $navCount,
+              slidesToScroll: 1,
+              asNavFor: '#slick',
+              centerMode: true,
+              focusOnSelect: true,
+              arrows: true
+          });
+      }
   });
 </script>
 <script>
