@@ -380,16 +380,14 @@
         if ($navCount === 1) {
             $slickNav.css({'display': 'none',});
         }
-        else {
-            $slickNav.slick({
-                slidesToShow: $navCount,
-                slidesToScroll: 1,
-                asNavFor: '#slick',
-                centerMode: true,
-                focusOnSelect: true,
-                arrows: true
-            });
-        }
+        $slickNav.slick({
+            slidesToShow: $navCount,
+            slidesToScroll: 1,
+            asNavFor: '#slick',
+            centerMode: true,
+            focusOnSelect: true,
+            arrows: true
+        });
     });
 </script>
 
