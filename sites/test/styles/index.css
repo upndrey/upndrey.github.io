@@ -2081,6 +2081,34 @@ body {
           background: transparent;
           color: white;
           cursor: auto; }
+    .callback__form > .icons {
+      display: flex; }
+      .callback__form > .icons .tg {
+        position: relative;
+        display: block;
+        background-image: url("../images/footer/icons/tg.png");
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 44px;
+        height: 44px;
+        margin-right: 30px; }
+        @media screen and (max-width: 768px) {
+          .callback__form > .icons .tg {
+            margin-right: 0; } }
+      .callback__form > .icons .wapp {
+        position: relative;
+        display: block;
+        background-image: url("../images/footer/icons/wapp.png");
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 44px;
+        height: 44px; }
+      @media screen and (max-width: 768px) {
+        .callback__form > .icons {
+          justify-content: space-around; } }
+      @media screen and (max-width: 768px) {
+        .callback__form > .icons {
+          margin-bottom: 15px; } }
     .callback__form textarea {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;

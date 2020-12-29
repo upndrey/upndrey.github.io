@@ -2032,6 +2032,25 @@ body {
         }
       }
     }
+    &>.icons {
+      display: flex;
+      .tg {
+        @include icon("../images/footer/icons/tg.png", 44px, 44px, false);
+        margin-right: 30px;
+        @include tablets {
+          margin-right: 0;
+        }
+      }
+      .wapp {
+        @include icon("../images/footer/icons/wapp.png", 44px, 44px, false);
+      }
+      @include tablets {
+        justify-content: space-around;
+      }
+      @include tablets {
+        margin-bottom: 15px;
+      }
+    }
 
     textarea {
       font-family: 'Open Sans', sans-serif;
