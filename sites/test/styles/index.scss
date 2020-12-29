@@ -2593,7 +2593,38 @@ body {
           height: auto;
         }
 
+        &>.select {
+          width: 100%;
+          position: relative;
+          &>span {
+            position: absolute;
+            height: 63px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 15px;
+          }
+        }
+
+        & select {
+          &>option {
+            color: #000;
+          }
+        }
+        &>.select>.bigBlock {
+           font-weight: 300;
+           margin-top: 0;
+           margin-bottom: 15px;
+           font-size: 20px;
+           background: transparent;
+           color: white;
+         }
+        &>.select>.bigBlock {
+          padding-left: 150px;
+        }
       }
+
+
       & .bigBlock {
         font-family: 'Open Sans', sans-serif;
         font-weight: 300;
@@ -2601,9 +2632,8 @@ body {
         height: 63px;
         box-sizing: border-box;
         border: 1px solid #fff;
-        padding: 15px 30px;
+        padding: 15px 30px 15px 30px;
       }
-
 
       textarea {
         width: 50% !important;
@@ -2631,6 +2661,7 @@ body {
       width: 100%;
       display: flex;
       justify-content: flex-end;
+      margin-bottom: 10px;
       &>* {
         transition: .5s ease-in-out;
         min-width: 220px;
@@ -2652,6 +2683,7 @@ body {
       .file {
         font-family: 'Open Sans', sans-serif;
         margin-right: 15px;
+        flex-grow: 1;
 
         &:hover {
           background: transparent;
@@ -2668,6 +2700,25 @@ body {
         flex-direction: column;
       }
     }
+    &>.icons {
+       display: flex;
+       .tg {
+         @include icon("../images/footer/icons/tg.png", 44px, 44px, false);
+         margin-right: 30px;
+         @include tablets {
+           margin-right: 0;
+         }
+       }
+       .wapp {
+         @include icon("../images/footer/icons/wapp.png", 44px, 44px, false);
+       }
+       @include tablets {
+         justify-content: space-around;
+       }
+       @include tablets {
+         margin-bottom: 15px;
+       }
+     }
 
     @include phones{
       padding: 10px;
