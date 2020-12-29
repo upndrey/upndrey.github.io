@@ -2108,7 +2108,7 @@ body {
           justify-content: space-around; } }
       @media screen and (max-width: 768px) {
         .callback__form > .icons {
-          margin-bottom: 15px; } }
+          margin-bottom: 50px; } }
     .callback__form textarea {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
@@ -2679,7 +2679,7 @@ body {
           justify-content: space-around; } }
       @media screen and (max-width: 768px) {
         .service__form > .icons {
-          margin-bottom: 15px; } }
+          margin-bottom: 50px; } }
     @media screen and (max-width: 480px) {
       .service__form {
         padding: 10px;
