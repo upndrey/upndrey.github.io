@@ -13,16 +13,38 @@ function init(){
 }
 
 if ($(window).width() > 900) {
-var myFullpage = new fullpage('#fullpage', {
-    anchors: ['firstScreen', 'catalog', 'services','callback'],
-    menu: '#menu',
-    responsiveWidth: 800,
-    navigation:false,
-    scrollOverflow: true,
-    scrollOverflowOptions: {
-        disablePointer: true
-    }
-});
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstScreen', 'catalog', 'services','callback'],
+        menu: '#menu',
+        responsiveWidth: 800,
+        navigation:false,
+        scrollOverflow: true,
+        scrollOverflowOptions: {
+            disablePointer: true
+        }
+    });
+}
+else {
+    $("#firstScreenLink").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#firstScreenGoTo").offset().top
+        }, 2000);
+    });
+    $("#catalogLink").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#catalogGoTo").offset().top
+        }, 2000);
+    });
+    $("#servicesLink").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#servicesGoTo").offset().top
+        }, 2000);
+    });
+    $("#callbackLink").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#callbackGoTo").offset().top
+        }, 2000);
+    });
 }
 
 $("#send-message").click(function(e) {

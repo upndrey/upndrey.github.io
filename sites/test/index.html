@@ -27,13 +27,13 @@
     </div>
 </div>
 <ul id="menu">
-    <li data-menuanchor="firstScreen" class="active"><a href="index.html#firstScreen"></a></li>
-    <li data-menuanchor="catalog"><a href="index.html#catalog"></a></li>
-    <li data-menuanchor="services"><a href="index.html#services"></a></li>
-    <li data-menuanchor="callback"><a href="index.html#callback"></a></li>
+    <li data-menuanchor="firstScreen" class="active" id="firstScreenLink"><a href="index.html#firstScreen"></a></li>
+    <li data-menuanchor="catalog" id="catalogLink"><a href="index.html#catalog"></a></li>
+    <li data-menuanchor="services" id="servicesLink"><a href="index.html#services"></a></li>
+    <li data-menuanchor="callback" id="callbackLink"><a href="index.html#callback"></a></li>
 </ul>
 <div id="fullpage">
-    <div class="firstScreenWrapper section" data-anchor="firstScreen">
+    <div class="firstScreenWrapper section" data-anchor="firstScreen" id="firstScreenGoTo">
         <header class="header">
             <div class="header__logo"></div>
             <nav class="header__menu menu">
@@ -100,7 +100,7 @@
             <div class="videoCtrl__stop"></div>
         </div>
     </div>
-    <div class="catalog__wrapper section" data-anchor="catalog">
+    <div class="catalog__wrapper section" data-anchor="catalog" id="catalogGoTo">
         <div class="container catalog">
             <div class="titleBlock">
                 <h2>Каталог</h2>
@@ -210,7 +210,7 @@
         </div>
     </div>
     <div class="section">
-        <div class="services__wrapper" data-anchor="services">
+        <div class="services__wrapper" data-anchor="services" id="servicesGoTo">
             <div class="hiddenBlocks__bg displaynone"></div>
             <div class="container services">
                 <div class="titleBlock">
@@ -333,7 +333,7 @@
         </div>
     </div>
     <div class="section">
-        <div class="callback__wrapper" data-anchor="callback">
+        <div class="callback__wrapper" data-anchor="callback" id="servicesGoTo">
             <div class="container callback">
                 <form action="#" class="callback__form">
                     <h2>Обратная связь</h2>
