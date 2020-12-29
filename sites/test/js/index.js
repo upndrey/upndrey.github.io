@@ -1,13 +1,13 @@
 ymaps.ready(init);
 function init(){
-    var myMap1 = new ymaps.Map("map1",{center: [45.032878,39.022996],zoom: 12});
-    var myMap2 = new ymaps.Map("map2",{center: [55.483439,38.312356],zoom: 12});
+    var myMap1 = new ymaps.Map("map1",{center: [45.040264224303804,39.044481419948376],zoom: 12});
+    var myMap2 = new ymaps.Map("map2",{center: [55.485331922482324,38.324893993857174],zoom: 12});
 
     myMap1.controls.add("zoomControl");
     myMap2.controls.add("zoomControl");
 
-    var myPlacemark1 = new ymaps.Placemark([45.032878,39.022996]);
-    var myPlacemark2 = new ymaps.Placemark([55.483439,38.312356]);
+    var myPlacemark1 = new ymaps.Placemark([45.040264224303804,39.044481419948376]);
+    var myPlacemark2 = new ymaps.Placemark([55.485331922482324,38.324893993857174]);
     myMap1.geoObjects.add(myPlacemark1);
     myMap2.geoObjects.add(myPlacemark2);
 }
