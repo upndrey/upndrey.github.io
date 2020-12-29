@@ -13,7 +13,7 @@ function init(){
 }
 
 if ($(window).width() > 900) {
-    var myFullpage = new fullpage('#fullpage', {
+    $('#fullpage').fullpage({
         anchors: ['firstScreen', 'catalog', 'services','callback'],
         menu: '#menu',
         responsiveWidth: 800,
