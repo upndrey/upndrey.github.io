@@ -2679,17 +2679,17 @@ body {
 
 .rezkaBg {
   &:before {
-    @include icon("../images/services/rezka.png", 100%, 100%);
+    @include icon("../images/services/rezka.png", 100%, 100%, absolute);
   }
 }
 .metallBg {
   &:before {
-    @include icon("../images/firstScreen/svarka.jpg", 100%, 100%);
+    @include icon("../images/firstScreen/svarka.jpg", 100%, 100%, absolute);
   }
 }
 .plenkaBg {
   &:before {
-    @include icon("../images/services/plenka.png", 100%, 100%);
+    @include icon("../images/services/plenka.png", 100%, 100%, absolute);
   }
 }
 .zinkBg {
