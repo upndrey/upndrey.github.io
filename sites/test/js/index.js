@@ -29,22 +29,22 @@ else {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#firstScreenGoTo").offset().top
         }, 1000);
-    }).classList.toggle("active");
+    });
     $(".catalogLink").click(function() {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#catalogGoTo").offset().top
         }, 1000);
-    }).classList.toggle("active");
+    });
     $(".servicesLink").click(function() {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#servicesGoTo").offset().top
         }, 1000);
-    }).classList.toggle("active");
+    });
     $(".callbackLink").click(function() {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#callbackGoTo").offset().top
         }, 1000);
-    }).classList.toggle("active");
+    });
 }
 
 $("#send-message").click(function(e) {
