@@ -25,25 +25,29 @@ if ($(window).width() > 900) {
     });
 }
 else {
-    $("#firstScreenLink").click(function() {
+    $(".firstScreenLink").click(function() {
+        $(this).classList.toggle("active");
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#firstScreenGoTo").offset().top
-        }, 2000);
+        }, 1000);
     });
-    $("#catalogLink").click(function() {
+    $(".catalogLink").click(function() {
+        $(this).classList.toggle("active");
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#catalogGoTo").offset().top
-        }, 2000);
+        }, 1000);
     });
-    $("#servicesLink").click(function() {
+    $(".servicesLink").click(function() {
+        $(this).classList.toggle("active");
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#servicesGoTo").offset().top
-        }, 2000);
+        }, 1000);
     });
-    $("#callbackLink").click(function() {
+    $(".callbackLink").click(function() {
+        $(this).classList.toggle("active");
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#callbackGoTo").offset().top
-        }, 2000);
+        }, 1000);
     });
 }
 
