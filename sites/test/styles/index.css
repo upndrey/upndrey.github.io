@@ -2636,17 +2636,18 @@ body {
 
 .rezkaBg:before {
   content: '';
-  position: relative;
+  position: absolute;
   display: block;
   background-image: url("../images/services/rezka.png");
   -webkit-background-size: cover;
   background-size: cover;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: absolute; }
 
 .metallBg:before {
   content: '';
-  position: relative;
+  position: absolute;
   display: block;
   background-image: url("../images/firstScreen/svarka.jpg");
   -webkit-background-size: cover;
@@ -2656,7 +2657,7 @@ body {
 
 .plenkaBg:before {
   content: '';
-  position: relative;
+  position: absolute;
   display: block;
   background-image: url("../images/services/plenka.png");
   -webkit-background-size: cover;
