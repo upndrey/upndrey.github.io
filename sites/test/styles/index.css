@@ -2446,6 +2446,7 @@ body {
         .vacancy__title h1 {
           margin-bottom: 25px; } }
     .vacancy__title .back {
+      color: #2180FF;
       display: inline-block;
       text-decoration: underline; }
     @media screen and (max-width: 480px) {
@@ -2524,6 +2525,7 @@ body {
       color: #2180FF;
       cursor: pointer; }
   .vacancy > .back {
+    color: #2180FF;
     display: block;
     text-decoration: underline;
     text-align: right; }
@@ -2532,6 +2534,90 @@ body {
         text-align: center; } }
 
 /* /VACANCY */
+/* ALERT */
+.alert {
+  color: #fff;
+  font-size: 16px;
+  flex-direction: column;
+  min-height: 800px;
+  padding: 100px 0;
+  font-weight: 300; }
+  .alert .displaynone {
+    display: none; }
+  .alert__wrapper {
+    position: relative;
+    background: #161C28;
+    overflow-x: hidden; }
+    .alert__wrapper:before {
+      content: '';
+      position: absolute;
+      width: 283px;
+      height: 1074px;
+      right: -300px;
+      top: 0;
+      background: #121E79;
+      opacity: 0.6;
+      filter: blur(250px); }
+  .alert__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; }
+    .alert__title h1 {
+      display: inline-block;
+      font-size: 30px;
+      position: relative; }
+      .alert__title h1:before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-image: url("../images/horizontal_line.png");
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 180px;
+        height: 2px;
+        bottom: -15px; }
+        @media screen and (max-width: 480px) {
+          .alert__title h1:before {
+            display: none; } }
+      @media screen and (max-width: 480px) {
+        .alert__title h1 {
+          text-align: center;
+          margin-bottom: 25px; } }
+    .alert__title .back {
+      color: #2180FF;
+      display: inline-block;
+      text-decoration: underline; }
+    @media screen and (max-width: 480px) {
+      .alert__title {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; } }
+  .alert h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px; }
+  .alert p {
+    font-size: 18px;
+    margin-bottom: 30px; }
+    .alert p > span {
+      color: #2180FF; }
+  @media screen and (max-width: 480px) {
+    .alert {
+      width: auto;
+      box-sizing: content-box;
+      margin: 0 5px 30px 5px; } }
+  .alert > .back {
+    color: #2180FF;
+    display: block;
+    text-decoration: underline;
+    text-align: right; }
+    @media screen and (max-width: 480px) {
+      .alert > .back {
+        text-align: center; } }
+
+/* /ALERT */
 /* SERVICE */
 .service {
   color: #fff;
