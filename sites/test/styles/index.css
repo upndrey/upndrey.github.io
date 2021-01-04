@@ -2499,6 +2499,22 @@ body {
     .vacancy__body .block p {
       font-size: 16px;
       margin-bottom: 30px; }
+    .vacancy__body .block__location {
+      font-size: 21px !important;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-left: 10px; }
+      .vacancy__body .block__location:before {
+        content: '';
+        position: relative;
+        display: block;
+        background-image: url("../images/vacancy/icons/location.png");
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 23px;
+        height: 32px;
+        right: 10px; }
     @media screen and (max-width: 480px) {
       .vacancy__body .block {
         width: auto;

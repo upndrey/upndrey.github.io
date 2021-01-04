@@ -2508,6 +2508,19 @@ body {
         margin-bottom: 30px;
       }
 
+      &__location {
+        font-size: 21px !important;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+
+        &:before {
+          @include icon("../images/vacancy/icons/location.png", 23px, 32px, true, relative);
+          right: 10px;
+        }
+      }
+
       @include phones {
         width: auto;
         box-sizing: content-box;
