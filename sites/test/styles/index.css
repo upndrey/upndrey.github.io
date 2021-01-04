@@ -2406,6 +2406,8 @@ body {
   min-height: 800px;
   padding: 100px 0;
   font-weight: 300; }
+  .vacancy .displaynone {
+    display: none; }
   .vacancy__wrapper {
     position: relative;
     background: #161C28;
@@ -2420,41 +2422,98 @@ body {
       background: #121E79;
       opacity: 0.6;
       filter: blur(250px); }
-  .vacancy > div {
+  .vacancy__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; }
+    .vacancy__title h1 {
+      display: inline-block;
+      font-size: 30px;
+      position: relative; }
+      .vacancy__title h1:before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-image: url("../images/horizontal_line.png");
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 180px;
+        height: 2px;
+        bottom: -15px; }
+      @media screen and (max-width: 480px) {
+        .vacancy__title h1 {
+          margin-bottom: 25px; } }
+    .vacancy__title .back {
+      display: inline-block;
+      text-decoration: underline; }
+    @media screen and (max-width: 480px) {
+      .vacancy__title {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; } }
+  .vacancy__body .block {
     display: flex;
     flex-direction: column;
-    width: 800px;
-    margin: auto;
-    max-width: 100%; }
-  .vacancy h1 {
+    width: 682px;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    max-width: 100%;
+    background: rgba(0, 109, 255, 0.3);
+    border-radius: 15px; }
+    .vacancy__body .block__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px; }
+      .vacancy__body .block__title h2 {
+        font-size: 21px;
+        font-weight: 700; }
+        @media screen and (max-width: 768px) {
+          .vacancy__body .block__title h2 {
+            margin-bottom: 10px; } }
+      .vacancy__body .block__title span {
+        position: relative;
+        display: flex;
+        align-items: center; }
+        .vacancy__body .block__title span:before {
+          content: '';
+          position: relative;
+          display: block;
+          background-image: url("../images/vacancy/icons/calendar.png");
+          -webkit-background-size: cover;
+          background-size: cover;
+          width: 32px;
+          height: 32px;
+          right: 10px; }
+      @media screen and (max-width: 768px) {
+        .vacancy__body .block__title {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; } }
+    .vacancy__body .block h3 {
+      font-size: 18px;
+      margin-bottom: 5px; }
+    .vacancy__body .block p {
+      font-size: 16px;
+      margin-bottom: 30px; }
+    @media screen and (max-width: 480px) {
+      .vacancy__body .block {
+        width: auto;
+        box-sizing: content-box;
+        margin: 0 5px 30px 5px; } }
+    .vacancy__body .block .vacancy__hide, .vacancy__body .block .vacancy__show {
+      color: #2180FF;
+      cursor: pointer; }
+  .vacancy > .back {
     display: block;
-    font-size: 30px;
-    margin-bottom: 15px;
-    position: relative; }
-    .vacancy h1:before {
-      content: '';
-      position: absolute;
-      display: block;
-      background-image: url("../images/horizontal_line.png");
-      -webkit-background-size: cover;
-      background-size: cover;
-      width: 180px;
-      height: 2px;
-      bottom: -15px; }
-  .vacancy .back {
-    margin-bottom: 35px;
-    text-decoration: underline; }
-  .vacancy h2 {
-    font-size: 21px;
-    margin-bottom: 10px; }
-  .vacancy h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    margin-left: 5px; }
-  .vacancy p {
-    font-size: 16px;
-    margin-bottom: 15px;
-    margin-left: 15px; }
+    text-decoration: underline;
+    text-align: right; }
+    @media screen and (max-width: 480px) {
+      .vacancy > .back {
+        text-align: center; } }
 
 /* /VACANCY */
 /* SERVICE */

@@ -2401,6 +2401,9 @@ body {
   min-height: 800px;
   padding: 100px 0;
   font-weight: 300;
+  .displaynone {
+    display: none;
+  }
   &__wrapper {
     position: relative;
     background: #161C28;
@@ -2419,45 +2422,111 @@ body {
       filter: blur(250px);
     }
   }
-  &>div {
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-    margin: auto;
-    max-width: 100%;
-  }
 
-  h1 {
-    display: block;
-    font-size: 30px;
-    margin-bottom: 15px;
-    position: relative;
-    &:before {
-      @include icon("../images/horizontal_line.png", 180px, 2px, true, absolute);
-      bottom: -15px;
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    h1 {
+      display: inline-block;
+      font-size: 30px;
+      position: relative;
+      &:before {
+        @include icon("../images/horizontal_line.png", 180px, 2px, true, absolute);
+        bottom: -15px;
+      }
+      @include phones {
+        margin-bottom: 25px;
+      }
+    }
+
+    .back {
+      display: inline-block;
+      text-decoration: underline;
+    }
+    @include phones {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
+  &__body {
+    .block  {
+      display: flex;
+      flex-direction: column;
+      width: 682px;
+      padding: 30px 50px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+      max-width: 100%;
+      background: rgba(0, 109, 255, 0.3);
+      border-radius: 15px;
 
-  .back {
-    margin-bottom: 35px;
+
+      &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        h2 {
+          font-size: 21px;
+          font-weight: 700;
+
+          @include tablets {
+            margin-bottom: 10px;
+          }
+        }
+        span { 
+          position: relative;
+          display: flex;
+          align-items: center;
+
+          &:before {
+            @include icon("../images/vacancy/icons/calendar.png", 32px, 32px, true, relative);
+            right: 10px;
+          }
+        }
+
+        @include tablets {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+
+      @include phones {
+        width: auto;
+        box-sizing: content-box;
+        margin: 0 5px 30px 5px;
+      }
+
+      .vacancy__hide, .vacancy__show {
+        color: #2180FF;
+        cursor: pointer;
+      }
+    }
+  }
+  &>.back {
+    display: block;
     text-decoration: underline;
-  }
-
-  h2 {
-    font-size: 21px;
-    margin-bottom: 10px;
-  }
-
-  h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-  }
-
-  p {
-    font-size: 16px;
-    margin-bottom: 15px;
-    margin-left: 15px;
+    text-align: right;
+    @include phones {
+      text-align: center;
+    }
   }
 }
 
