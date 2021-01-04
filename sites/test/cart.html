@@ -14,13 +14,13 @@
     <title>Метлайн</title>
 </head>
 <body>
-<div class="cart__wrapper">
-    <div class="container cart">
-        <div class="cart__title">
+<div class="cartPage__wrapper">
+    <div class="container cartPage">
+        <div class="cartPage__title">
             <h1>Корзина</h1>
             <a href="index.html" class="back">Вернуться на главную</a>
         </div>
-        <div class="cart__body emptyCart">
+        <div class="cartPage__body emptyCart">
             <div class="img"></div>
             <h2>В вашей корзине пока нет товаров.</h2>
             <p>Если Вы уже зарегистрированы, пожалуйста войдите для просмотра товаров в корзине</p>
@@ -29,8 +29,35 @@
                 <div class="login">Войти</div>
             </div>
         </div>
-        <div class="cart__body notEmptyCart displaynone">
-
+        <div class="cartPage__body notEmptyCart displaynone">
+            <table>
+                <tr>
+                    <th>Название товара</th>
+                    <th>Количество</th>
+                    <th>Единица</th>
+                    <th>Сумма</th>
+                    <th>Металлобаза</th>
+                    <th>Удалить</th>
+                </tr>
+                <tbody>
+                <tr>
+                    <td>Лист г/к 3x1250x2500 Ст3</td>
+                    <td class="count"></td>
+                    <td>Т</td>
+                    <td><span>69990</span> ₽</td>
+                    <td>Москва</td>
+                    <td class="remove"></td>
+                </tr>
+                <tr>
+                    <td>Лист г/к 3x1250x2500 Ст3</td>
+                    <td class="count"></td>
+                    <td>Т</td>
+                    <td><span>69990</span> ₽</td>
+                    <td>Москва</td>
+                    <td class="remove"></td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

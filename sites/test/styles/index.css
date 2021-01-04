@@ -2619,20 +2619,18 @@ body {
 
 /* /ALERT */
 /* CART */
-.cart {
+.cartPage {
   color: #fff;
   font-size: 16px;
   flex-direction: column;
   min-height: 800px;
   padding: 100px 0;
   font-weight: 300; }
-  .cart .displaynone {
-    display: none; }
-  .cart__wrapper {
+  .cartPage__wrapper {
     position: relative;
     background: #161C28;
     overflow-x: hidden; }
-    .cart__wrapper:before {
+    .cartPage__wrapper:before {
       content: '';
       position: absolute;
       width: 283px;
@@ -2642,17 +2640,17 @@ body {
       background: #121E79;
       opacity: 0.6;
       filter: blur(250px); }
-  .cart__title {
+  .cartPage__title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px; }
-    .cart__title h1 {
+    .cartPage__title h1 {
       display: inline-block;
       font-size: 30px;
       position: relative; }
-      .cart__title h1:before {
+      .cartPage__title h1:before {
         content: '';
         position: absolute;
         display: block;
@@ -2663,23 +2661,25 @@ body {
         height: 2px;
         bottom: -15px; }
       @media screen and (max-width: 480px) {
-        .cart__title h1 {
+        .cartPage__title h1 {
           margin-bottom: 25px; } }
-    .cart__title .back {
+    .cartPage__title .back {
       color: #2180FF;
       display: inline-block;
       text-decoration: underline; }
     @media screen and (max-width: 480px) {
-      .cart__title {
+      .cartPage__title {
         flex-direction: column;
         align-items: center;
         justify-content: center; } }
-  .cart__body.emptyCart {
+  .cartPage__body.emptyCart {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    .cart__body.emptyCart .img {
+    .cartPage__body.emptyCart.displaynone {
+      display: none; }
+    .cartPage__body.emptyCart .img {
       margin-bottom: 30px;
       position: relative;
       display: block;
@@ -2688,19 +2688,19 @@ body {
       background-size: cover;
       width: 184px;
       height: 172px; }
-    .cart__body.emptyCart h2 {
+    .cartPage__body.emptyCart h2 {
       font-size: 21px;
       margin-bottom: 15px;
       font-weight: 600; }
-    .cart__body.emptyCart p {
+    .cartPage__body.emptyCart p {
       font-size: 16px;
       margin-bottom: 30px;
       font-weight: 400; }
-    .cart__body.emptyCart > .buttons {
+    .cartPage__body.emptyCart > .buttons {
       display: flex;
       justify-content: center;
       width: 100%; }
-      .cart__body.emptyCart > .buttons > div {
+      .cartPage__body.emptyCart > .buttons > div {
         width: 242px;
         height: 62px;
         box-sizing: border-box;
@@ -2716,30 +2716,37 @@ body {
         transition: .5s ease-in-out;
         cursor: pointer;
         margin: 0 15px; }
-      .cart__body.emptyCart > .buttons .signup {
+      .cartPage__body.emptyCart > .buttons .signup {
         border: 2px solid rgba(0, 109, 255, 0.74);
         box-shadow: inset 1px 0px 5px rgba(191, 65, 69, 0.25); }
-        .cart__body.emptyCart > .buttons .signup:hover {
+        .cartPage__body.emptyCart > .buttons .signup:hover {
           background: rgba(0, 109, 255, 0.74);
           border: 2px solid transparent; }
-      .cart__body.emptyCart > .buttons .login {
+      .cartPage__body.emptyCart > .buttons .login {
         border: 2px solid rgba(191, 65, 69, 0.74);
         box-shadow: inset 1px 0px 5px rgba(191, 65, 69, 0.25); }
-        .cart__body.emptyCart > .buttons .login:hover {
+        .cartPage__body.emptyCart > .buttons .login:hover {
           background: rgba(191, 65, 69, 0.74);
           border: 2px solid transparent; }
+  .cartPage__body.notEmptyCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .cartPage__body.notEmptyCart.displaynone {
+      display: none; }
   @media screen and (max-width: 480px) {
-    .cart__body {
+    .cartPage__body {
       width: auto;
       box-sizing: content-box;
       margin: 0 5px 30px 5px; } }
-  .cart > .back {
+  .cartPage > .back {
     color: #2180FF;
     display: block;
     text-decoration: underline;
     text-align: right; }
     @media screen and (max-width: 480px) {
-      .cart > .back {
+      .cartPage > .back {
         text-align: center; } }
 
 /* /CART */
