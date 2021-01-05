@@ -2651,6 +2651,103 @@ body {
 }
 
 /* /ALERT */
+/* DOCS */
+
+.docs {
+  color: #fff;
+  font-size: 16px;
+  flex-direction: column;
+  min-height: 800px;
+  padding: 100px 0;
+  font-weight: 300;
+  .displaynone {
+    display: none;
+  }
+  &__wrapper {
+    position: relative;
+    background: #161C28;
+    overflow-x: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 283px;
+      height: 1074px;
+      right: -300px;
+      top: 0;
+
+      background: #121E79;
+      opacity: 0.6;
+      filter: blur(250px);
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    h1 {
+      display: inline-block;
+      font-size: 30px;
+      position: relative;
+      &:before {
+        @include icon("../images/horizontal_line.png", 180px, 2px, true, absolute);
+        bottom: -15px;
+        @include phones {
+          display: none;
+        }
+      }
+      @include phones {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+    }
+
+    .back {
+      color: #2180FF;
+      display: inline-block;
+      text-decoration: underline;
+    }
+    @include phones {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    &>span {
+      color: #2180FF;
+    }
+  }
+
+  @include phones {
+    width: auto;
+    box-sizing: content-box;
+    margin: 0 5px 30px 5px;
+  }
+  &>.back {
+    color: #2180FF;
+    display: block;
+    text-decoration: underline;
+    text-align: right;
+    @include phones {
+      text-align: center;
+    }
+  }
+}
+
+/* /DOCS */
 
 /* CART */
 
