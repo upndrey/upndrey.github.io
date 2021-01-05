@@ -1949,7 +1949,7 @@ body {
       .services__block {
         flex-direction: column;
         width: 100%;
-        height: 700px;
+        height: 750px;
         overflow-x: scroll; } }
 
 /* /SERVICES */
@@ -1993,7 +1993,7 @@ body {
       opacity: .9;
       z-index: 2; }
   .callback__form {
-    width: 50%;
+    width: 492px;
     height: 630px;
     display: flex;
     flex-wrap: wrap;
@@ -2145,25 +2145,29 @@ body {
     @media screen and (max-width: 480px) {
       .callback__form {
         height: auto;
-        margin-bottom: 100px; } }
+        margin-bottom: 0; } }
   .callback .contacts {
+    width: 528px;
     box-sizing: border-box;
-    margin-left: 50px; }
+    margin-left: 50px;
+    background: rgba(0, 109, 255, 0.2);
+    padding: 0 50px; }
     .callback .contacts h2 {
       height: 63px;
       font-size: 30px;
-      font-weight: 600;
-      line-height: 49px;
+      font-weight: 400;
+      line-height: 40px;
       position: relative;
       bottom: 0; }
       @media screen and (max-width: 480px) {
         .callback .contacts h2 {
           font-size: 24px;
           font-weight: 600;
-          line-height: 24px; } }
+          line-height: 24px;
+          text-align: center; } }
     .callback .contacts h3 {
       font-size: 26px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       width: 100%; }
       @media screen and (max-width: 480px) {
         .callback .contacts h3 {
@@ -2185,18 +2189,12 @@ body {
         flex-wrap: wrap;
         justify-content: flex-start; }
         .callback .contacts__info > .block > div {
-          margin: 10px 30px 10px 5px; }
+          margin-left: 10px; }
           .callback .contacts__info > .block > div p {
-            margin-bottom: 5px;
+            margin-bottom: 15px;
             min-width: 170px; }
-          @media screen and (max-width: 480px) {
-            .callback .contacts__info > .block > div {
-              margin: 10px auto; } }
-        @media screen and (max-width: 480px) {
-          .callback .contacts__info > .block {
-            justify-content: center;
-            align-items: center;
-            text-align: center; } }
+        .callback .contacts__info > .block.contacts__email p {
+          color: #2180FF; }
       .callback .contacts__info > .bigBlock {
         width: 100%;
         display: flex;
@@ -2214,6 +2212,10 @@ body {
     @media screen and (max-width: 1024px) {
       .callback .contacts {
         margin-left: 0; } }
+    @media screen and (max-width: 480px) {
+      .callback .contacts {
+        padding: 15px;
+        width: 100%; } }
   @media screen and (max-width: 1024px) {
     .callback {
       max-width: 500px;

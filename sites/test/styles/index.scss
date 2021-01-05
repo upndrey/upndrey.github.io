@@ -1866,7 +1866,7 @@ body {
     @include phones {
       flex-direction: column;
       width: 100%;
-      height: 700px;
+      height: 750px;
       overflow-x: scroll;
     }
   }
@@ -1918,7 +1918,7 @@ body {
 
 
   &__form {
-    width: 50%;
+    width: 492px;
     height: 630px;
     display: flex;
     flex-wrap: wrap;
@@ -2093,18 +2093,21 @@ body {
 
     @include phones{
       height: auto;
-      margin-bottom: 100px;
+      margin-bottom: 0;
     }
   }
 
   .contacts {
+    width: 528px;
     box-sizing: border-box;
     margin-left: 50px;
+    background: rgba(0, 109, 255, 0.2);
+    padding: 0 50px;
     h2 {
       height: 63px;
       font-size: 30px;
-      font-weight: 600;
-      line-height: 49px;
+      font-weight: 400;
+      line-height: 40px;
       position: relative;
       bottom: 0;
 
@@ -2112,12 +2115,13 @@ body {
         font-size: 24px;
         font-weight: 600;
         line-height: 24px;
+        text-align: center;
       }
     }
 
     h3 {
       font-size: 26px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       width: 100%;
 
       @include phones{
@@ -2144,19 +2148,17 @@ body {
         flex-wrap: wrap;
         justify-content: flex-start;
         &>div {
-          margin: 10px 30px 10px 5px;
+          margin-left: 10px;
           p {
-            margin-bottom: 5px;
+            margin-bottom: 15px;
             min-width: 170px;
           }
-          @include phones{
-            margin: 10px auto;
-          }
         }
-        @include phones{
-          justify-content: center;
-          align-items: center;
-          text-align: center;
+
+        &.contacts__email {
+          & p {
+            color: #2180FF;
+          }
         }
       }
 
@@ -2184,6 +2186,11 @@ body {
 
     @include laptop{
       margin-left: 0;
+    }
+
+    @include phones{
+      padding: 15px;
+      width: 100%;
     }
   }
 
