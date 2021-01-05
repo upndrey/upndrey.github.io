@@ -2776,12 +2776,144 @@ body {
       }
     }
     &.notEmptyCart {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      &>table {
+        width: 100%;
+        .prodHead {
+          &>tr {
+            display: flex;
+            justify-content: space-between;
+
+            &>th {
+              padding: 10px 0;
+              font-size: 21px;
+              font-weight: 600;
+
+              &:nth-child(1) {
+                width: 260px;
+                text-align: left;
+              }
+
+              &:nth-child(2) {
+                width: 160px;
+              }
+
+              &:nth-child(3) {
+                width: 117px;
+              }
+
+              &:nth-child(4) {
+                width: 172px;
+              }
+
+              &:nth-child(5) {
+                width: 192px;
+              }
+
+              &:nth-child(6) {
+                width: 112px;
+              }
+            }
+          }
+        }
+        .prod {
+          &>tr {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-top: 1px solid #fff;
+            &>td {
+              font-size: 18px;
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              &.prod__title {
+                width: 260px;
+                text-align: left;
+                justify-content: flex-start;
+              }
+
+              &.prod__count {
+                width: 160px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &>div {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-around;
+                  width: 165px;
+                  height: 40px;
+                  background: rgba(0, 109, 255, 0.2);
+                  border-radius: 18px;
+                  &>input {
+                    width: 40px;
+                    background: none;
+                    border: 0;
+                    color: #fff;
+                    text-align: center;
+                    position: relative;
+                    left: 10px;
+                  }
+                  &>.minus, &>.plus {
+                    cursor: pointer;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 600;
+                    background: rgba(33, 128, 255, 0.4);
+                    border-radius: 50px;
+                    box-sizing: border-box;
+                    padding-bottom: 2px;
+                  }
+                }
+              }
+
+              &.prod__type {
+                width: 117px;
+              }
+
+              &.prod__price {
+                width: 172px;
+                &>span {
+                  margin-right: 5px;
+                }
+              }
+
+              &.prod__location {
+                width: 192px;
+              }
+
+              &.prod__remove {
+                width: 112px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &>div {
+                  @include icon("../images/cart/icons/delete.png", 25px, 28px, false, relative);
+
+                }
+              }
+            }
+
+          }
+        }
+      }
       &.displaynone {
         display: none;
+      }
+      &>.back {
+        color: #2180FF;
+        display: block;
+        text-decoration: underline;
+        text-align: right;
+        margin-top: 10px;
+        @include phones {
+          text-align: center;
+        }
       }
     }
 
@@ -2789,15 +2921,6 @@ body {
       width: auto;
       box-sizing: content-box;
       margin: 0 5px 30px 5px;
-    }
-  }
-  &>.back {
-    color: #2180FF;
-    display: block;
-    text-decoration: underline;
-    text-align: right;
-    @include phones {
-      text-align: center;
     }
   }
 }
