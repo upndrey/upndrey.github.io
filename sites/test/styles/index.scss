@@ -396,8 +396,9 @@ body {
   .buttons {
     display: flex;
     align-items: center;
-    margin-bottom: 42px;
-    &>* {
+    width: 567px;
+    flex-wrap: wrap;
+    .btn-send, .btn-catalog {
       box-sizing: border-box;
       display: flex;
       align-items: center;
@@ -419,9 +420,9 @@ body {
         background: #006DFF;
       }
 
-      @include phones {
+      @include tablets {
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
     }
 
@@ -436,9 +437,18 @@ body {
       &:hover {
         background: #BF4145;
       }
+      @include tablets {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    @include laptop {
+      margin: 0 auto 15px auto;
     }
 
     @include tablets {
+      width: 100%;
       justify-content: center;
     }
 
@@ -447,18 +457,56 @@ body {
       align-items: center;
       justify-content: center;
     }
+
+    .alertBlock {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 100%;
+      height: 63px;
+
+      background: rgba(191, 65, 69, 0.74);
+      border-radius: 14px;
+      margin-top: 10px;
+
+      padding-right: 30px;
+
+      &__logo {
+        @include icon("../images/firstScreen/small_logo.png", 42px, 50px, false);
+        margin: 5px 15px;
+
+        @include tablets{
+          display: none;
+        }
+      }
+
+      @include tablets{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+    }
   }
 
-  .alertBlock {
+  .docsLink {
     position: absolute;
     right: -100px;
-    bottom: -50px;
+    bottom: 45px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    width: 531px;
+    width: 380px;
     height: 63px;
 
     background: rgba(0, 109, 255, 0.36);
@@ -467,7 +515,7 @@ body {
     padding-right: 30px;
 
     &__logo {
-      @include icon("../images/firstScreen/small_logo.png", 42px, 50px, false);
+      @include icon("../images/firstScreen/icons/docs.png", 30px, 39px, false);
       margin: 5px 15px;
 
       @include tablets{
@@ -499,8 +547,10 @@ body {
 
   }
 
+
+
   @include laptop {
-    margin-bottom: 140px;
+    margin-bottom: 15px;
   }
 
 

@@ -382,8 +382,9 @@ body {
   .title .buttons {
     display: flex;
     align-items: center;
-    margin-bottom: 42px; }
-    .title .buttons > * {
+    width: 567px;
+    flex-wrap: wrap; }
+    .title .buttons .btn-send, .title .buttons .btn-catalog {
       box-sizing: border-box;
       display: flex;
       align-items: center;
@@ -400,10 +401,10 @@ body {
       transition: .5s ease-in-out; }
       .title .buttons .btn-send:hover {
         background: #006DFF; }
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: 768px) {
         .title .buttons .btn-send {
           margin-right: 0;
-          margin-bottom: 20px; } }
+          margin-bottom: 10px; } }
     .title .buttons .btn-catalog {
       width: 242px;
       height: 61px;
@@ -413,49 +414,90 @@ body {
       transition: .5s ease-in-out; }
       .title .buttons .btn-catalog:hover {
         background: #BF4145; }
+      @media screen and (max-width: 768px) {
+        .title .buttons .btn-catalog {
+          margin-right: 0;
+          margin-bottom: 30px; } }
+    @media screen and (max-width: 1024px) {
+      .title .buttons {
+        margin: 0 auto 15px auto; } }
     @media screen and (max-width: 768px) {
       .title .buttons {
+        width: 100%;
         justify-content: center; } }
     @media screen and (max-width: 480px) {
       .title .buttons {
         flex-direction: column;
         align-items: center;
         justify-content: center; } }
-  .title .alertBlock {
+    .title .buttons .alertBlock {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 63px;
+      background: rgba(191, 65, 69, 0.74);
+      border-radius: 14px;
+      margin-top: 10px;
+      padding-right: 30px; }
+      .title .buttons .alertBlock__logo {
+        position: relative;
+        display: block;
+        background-image: url("../images/firstScreen/small_logo.png");
+        -webkit-background-size: cover;
+        background-size: cover;
+        width: 42px;
+        height: 50px;
+        margin: 5px 15px; }
+        @media screen and (max-width: 768px) {
+          .title .buttons .alertBlock__logo {
+            display: none; } }
+      @media screen and (max-width: 768px) {
+        .title .buttons .alertBlock {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          text-align: center; } }
+  .title .docsLink {
     position: absolute;
     right: -100px;
-    bottom: -50px;
+    bottom: 45px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 531px;
+    width: 380px;
     height: 63px;
     background: rgba(0, 109, 255, 0.36);
     border-radius: 14px;
     padding-right: 30px; }
-    .title .alertBlock__logo {
+    .title .docsLink__logo {
       position: relative;
       display: block;
-      background-image: url("../images/firstScreen/small_logo.png");
+      background-image: url("../images/firstScreen/icons/docs.png");
       -webkit-background-size: cover;
       background-size: cover;
-      width: 42px;
-      height: 50px;
+      width: 30px;
+      height: 39px;
       margin: 5px 15px; }
       @media screen and (max-width: 768px) {
-        .title .alertBlock__logo {
+        .title .docsLink__logo {
           display: none; } }
     @media screen and (max-width: 1440px) {
-      .title .alertBlock {
+      .title .docsLink {
         right: 0; } }
     @media screen and (max-width: 1024px) {
-      .title .alertBlock {
+      .title .docsLink {
         position: relative;
         margin: auto;
         right: 0;
         bottom: 0; } }
     @media screen and (max-width: 768px) {
-      .title .alertBlock {
+      .title .docsLink {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -466,7 +508,7 @@ body {
         text-align: center; } }
   @media screen and (max-width: 1024px) {
     .title {
-      margin-bottom: 140px; } }
+      margin-bottom: 15px; } }
   @media screen and (max-width: 768px) {
     .title {
       margin-bottom: 50px; } }
