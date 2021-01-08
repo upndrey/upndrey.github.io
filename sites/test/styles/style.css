@@ -714,6 +714,14 @@ h5 {
     margin:30px auto;
     transition: all 0.5s ease;
 }
+.docsLink {
+    color: #fff;
+    font-size: 21px;
+    text-decoration: underline;
+    position: relative;
+    top: 61px;
+    left: 150px;
+}
 
 .pricelist:before {
     content: 'Прайс-лист:';
@@ -1515,7 +1523,11 @@ h5 {
 }
 /* /CALLBACK */
 /* PRODUCT PAGE */
-#slick, #slickNav {
+.photo-prod {
+    width: 300px;
+}
+
+#slick {
 }
 
 #slickNav img {
@@ -1557,8 +1569,16 @@ h5 {
     bottom: 5px;
 }
 
-#slick>.img {
+#slick img {
 }
+
+#slickNav img {
+}
+
+.s-body {
+    margin-bottom: 125px;
+}
+
 .product_page_block {
     display: flex;
     flex-direction: column;
@@ -1574,7 +1594,7 @@ h5 {
 
 .product_page_block>.row {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .product_page_block>.row>* {
