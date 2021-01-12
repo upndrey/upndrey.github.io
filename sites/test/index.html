@@ -9,7 +9,7 @@
 
     <meta name="HandheldFriendly" content="true"/>
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/index.min.css">
     <title>Метлайн</title>
 </head>
 <body>
@@ -592,19 +592,19 @@
 <script type="text/javascript" src="./js/jquery.js"></script>
 <script type="text/javascript" src="./js/jquery.fullpage.min.js"></script>
 <script type="text/javascript" src="./js/vendors/scrolloverflow.min.js"></script>
-<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/index.min.js"></script>
 <script type="text/javascript" src="./js/slick.min.js"></script>
 
 <script type="text/javascript">
+    if(window.screen.width > 900){
     $(document).ready(function(){
-        if ($(window).width() > 900) {
-            $('#slick').slick({
-                centerMode: true,
-                infinite: false,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-            });
-            $('#slick').slick("slickGoTo", 1);
-        }
+        $('#slick').slick({
+            centerMode: true,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+        });
+        $('#slick').slick("slickGoTo", 1);
     });
+    }
 </script>

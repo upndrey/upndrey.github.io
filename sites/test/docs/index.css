@@ -177,6 +177,8 @@ body {
   .docsProd .link-fon-file {
     padding: 30px 50px;
     transition: 1s ease-in-out; }
+  .docsProd .link-fon-file a {
+    line-height: 22px; }
   .docsProd p {
     font-size: 16px;
     margin-bottom: 30px; }
@@ -209,6 +211,9 @@ body {
     @media screen and (max-width: 480px) {
       .docsProd > .back {
         text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .docsProd {
+      margin: 50px 10px; } }
 
 /* /VACANCY */
 /* FOOTER */

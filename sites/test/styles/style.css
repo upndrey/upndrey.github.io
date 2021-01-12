@@ -723,6 +723,13 @@ h5 {
     left: 150px;
 }
 
+@media (max-width:768px) {
+    .docsLink {
+        top: 0;
+        left: 0;
+    }
+}
+
 .pricelist:before {
     content: 'Прайс-лист:';
     display: block;

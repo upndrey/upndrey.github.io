@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
         myMap2.geoObjects.add(myPlacemark2);
     }
 
-    if ($(window).width() > 900) {
+    if(window.screen.width > 900){
         $('#fullpage').fullpage({
             anchors: ['firstScreen', 'catalog', 'services','callback'],
             menu: '#menu',
